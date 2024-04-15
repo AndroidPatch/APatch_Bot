@@ -53,6 +53,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     print(sign)
     if pwd==sign:
         await context.bot.approveChatJoinRequest(user_id=user_id,chat_id=-1002058433411)
+        await update.message.reply_text("密码正确")
     else:
         await update.message.reply_text("密码错误")
 
