@@ -15,6 +15,7 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
 import logging
+import os
 from html import escape
 from uuid import uuid4
 import hashlib
@@ -113,7 +114,8 @@ async def join_group(update: Update, context: ContextTypes.DEFAULT_TYPE) -> bool
 def main() -> None:
     """Run the bot."""
     # Create the Application and pass it your bot's token.
-    application = Application.builder().token("TOKEN").build()
+    token=os.getenv('TOKEN','None')
+    application = Application.builder().token(token).build()
 
     # on different commands - answer in Telegram
     application.add_handler(CommandHandler("start", start))
