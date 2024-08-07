@@ -101,7 +101,7 @@ async def join_group(update: Update, context: ContextTypes.DEFAULT_TYPE) -> bool
     #chat_id = -1007069301752
     
     bot=context.bot
-    await bot.send_message(chat_id=chat_id, text="题目：手机已解锁，已进入bootloader状态,请用kptools刷入手机\n https://exame.apatch.top/?id="+str(chat_id) +"  完成后，你将得到一个密码，可以查阅文档寻求帮助 https://apatch.dev ,对机器人发送 /join [你得到的密码] (例如 /join 123456)"
+    await bot.send_message(chat_id=chat_id, text="题目：手机已解锁，已进入bootloader状态,请用kptools刷入手机\n https://exame.apatch.dev/?id="+str(chat_id) +"  完成后，你将得到一个密码，可以查阅文档寻求帮助 https://apatch.dev ,对机器人发送 /join [你得到的密码] (例如 /join 123456)"
                             
     )
 
